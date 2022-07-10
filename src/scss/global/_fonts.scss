@@ -1,0 +1,12 @@
+@layer base {
+  @font-face {
+    font-family: "Laundry Grotesk";
+    src: url("./../fonts/LaundryGrotesk-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .level-body {
+    @apply text-base font-laundry;
+  }
+}

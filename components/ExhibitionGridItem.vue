@@ -1,5 +1,8 @@
 <template>
-  <div class="w-1/3 px-4 mb-16">
+  <nuxt-link 
+    :to="`/exhibitions/${exhibition.slug}`" 
+    class="w-1/3 px-4 mb-16 lg:hover:underline"
+  >
     <div class="images w-full mb-4">
       <div class="inner relative bg-grey-lighter">
         <div class="absolute top-0 left-0 w-full h-full">
@@ -9,7 +12,7 @@
       </div>
     </div>
 
-    <nuxt-link :to="`/exhibitions/${exhibition.slug}`" class="lg:hover:underline">
+    <div>
       <h2>"{{ exhibition.title }}"</h2>
 
       <div v-if="exhibition.artists.length > 3">
@@ -20,8 +23,8 @@
       </div>
 
       <p>{{ exhibition.startDate }} - {{ exhibition.endDate }}</p>
-    </nuxt-link>
-  </div>
+    </div>
+  </nuxt-link>
 </template>
 
 <script>
